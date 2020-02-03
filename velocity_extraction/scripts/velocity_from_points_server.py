@@ -15,7 +15,7 @@ def handle_vel(req):
 	print (len(points))
 	for i in range(len(points)-1):
 		vel = TwistStamped()
-		print points[i]
+		# print points[i]
 		vel.twist.linear.x = (points[i+1].x-points[i].x)/dt
 		vel.twist.linear.y = (points[i+1].y-points[i].y)/dt
 		vel.twist.linear.z = (points[i+1].z-points[i].z)/dt

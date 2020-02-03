@@ -14,7 +14,7 @@ def callback(msg):
 		vel = rospy.ServiceProxy('velocity_from_points', TwistFromPoints)
 		res = vel(msg)
 		pub.publish(res.velocity)
-		print "Published the velocity"
+		# print "Published the velocity"
 	except rospy.ServiceException, e:
 		print "Service call failed: %s"%e
 
