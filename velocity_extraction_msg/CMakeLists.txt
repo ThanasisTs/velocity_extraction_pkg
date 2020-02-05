@@ -4,6 +4,7 @@ project(velocity_extraction_msg)
 
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
+  std_msgs
   roscpp
   rospy
   trajectory_smoothing_msg
@@ -14,6 +15,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   TwistFromPoint.msg
+  TimeArray.msg
+  PointsStampedArray.msg
 )
 
 add_service_files(
@@ -26,6 +29,7 @@ generate_messages(
   DEPENDENCIES
   trajectory_smoothing_msg
   geometry_msgs
+  std_msgs
 )
 
 
