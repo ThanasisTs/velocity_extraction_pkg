@@ -3,7 +3,6 @@ import rospy
 from trajectory_smoothing_msg.msg import *
 from velocity_extraction_msg.msg import *
 from geometry_msgs.msg import TwistStamped
-# import velocity_extraction.srv
 from velocity_extraction_msg.srv import TwistFromPoints
 
 dt = 0.05
