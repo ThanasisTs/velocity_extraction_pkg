@@ -23,7 +23,7 @@ def main():
 	rospy.init_node('velocity_from_points')
 	global pub
 	pub = rospy.Publisher("final_topic", TwistFromPoint, queue_size=1000)
-	sub = rospy.Subscriber("smooth_robot_frame_coords_msg", SmoothRWristCoordsWithRespectToBase, callback)
+	sub = rospy.Subscriber("trajectory_points", SmoothRWristCoordsWithRespectToBase, callback)
 	rospy.spin()
 
 

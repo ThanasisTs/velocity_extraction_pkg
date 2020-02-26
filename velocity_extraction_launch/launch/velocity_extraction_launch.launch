@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <launch>
-	<arg name="zoro" default="1"/>
+<!-- 	<arg name="zoro" default="1"/>
 	<node name="trajectory_smoothing_server" pkg="trajectory_smoothing" type="smooth_server.py"
 		respawn="false" output="screen" />
 	
 	<node name="trajectory_smoothing_client" pkg="trajectory_smoothing" type="smoother_node.py"
-		respawn="false" output="screen" args="$(arg zoro)"> 
-		<!-- <arg name="zoro" default="$(arg zoro)"/> -->
-	</node>
+		respawn="false" output="screen" > 
+	</node> -->
+	
+	<node name="raw_points_transform" pkg="velocity_extraction" type="raw_points_transform.py"
+		respawn="false" output="screen" />
 
 	<node name="velocity_extraction_server" pkg="velocity_extraction" type="velocity_from_points_server.py"
 		respawn="false" output="screen" />
