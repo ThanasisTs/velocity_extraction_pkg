@@ -15,6 +15,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   TwistFromPoint.msg
+  TimeArray.msg
+  PointsStampedArray.msg
 )
 
 add_service_files(
